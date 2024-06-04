@@ -6,6 +6,11 @@
   </head>
   <body>
     <div class="container">
+      <!-- add fragments header block -->
+      <th:block th:include="fragments/header :: header"></th:block>
+
+      <!-- add productsTable fragment here -->
+      <th:block th:include="fragments/productsTable :: productsTable"></th:block>
 
     </div>
   </body>
