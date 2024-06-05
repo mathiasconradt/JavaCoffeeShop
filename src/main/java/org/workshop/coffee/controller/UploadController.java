@@ -36,6 +36,27 @@ public class UploadController {
 //        getPerson(model, principal).setProfilePic(name);
 //        personService.savePerson(getPerson(model, principal));
 
+        // Get file and save it in the UPLOAD_DIRECTORY
+        var name = file.getOriginalFilename().replace(" ", "_");
+        var fileNameAndPath = Paths.get(UPLOAD_DIRECTORY, name);
+
+        // validate that the fileNameAndPath is not vulnerable to path traversal
+        if (!fileNameAndPath.normalize().startsWith(Paths.get(UPLOAD_DIRECTORY).normalize())) {
+            model.addAttribute("msg", "Invalid file path");
+            return "person/upload";
+        }
+
+        Files.write(fileNameAndPath, file.getBytes());
+        model.addAttribute("msg", "Uploaded images: " + name);
+        getPerson(model, principal).setProfilePic(name);
+        personService.savePerson(getPerson(model, principal));
+
+        return "person/upload";
+    }
+
+    @GetMapping("/uploadimage2")
+    public String displayUploadForm2() {
+
         return "person/upload";
     }
 
