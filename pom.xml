@@ -95,6 +95,11 @@
             <artifactId>commons-text</artifactId>
             <version>1.10.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.snyk</groupId>
+            <artifactId>snyk-maven-plugin</artifactId>
+            <version>2.2.0</version>
+        </dependency>        
     </dependencies>
 
     <build>
@@ -109,6 +114,32 @@
                     </jvmArguments>
                 </configuration>
             </plugin>
+            <plugin>
+              <groupId>io.snyk</groupId>
+              <artifactId>snyk-maven-plugin</artifactId>
+              <version>2.2.0</version>
+              <inherited>false</inherited>
+              <executions>
+                <execution>
+                  <id>snyk-test</id>
+                  <goals>
+                    <goal>test</goal>
+                  </goals>
+                </execution>
+                <execution>
+                  <id>snyk-monitor</id>
+                  <goals>
+                    <goal>monitor</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <apiToken>2146b70b-80f0-4784-b9f6-a59d1eff8fe0</apiToken>
+                <args>
+                  <arg>--all-projects</arg>
+                </args>
+              </configuration>
+            </plugin>            
         </plugins>
     </build>
 
