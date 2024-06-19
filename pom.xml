@@ -134,7 +134,7 @@
                 </execution>
               </executions>
               <configuration>
-                <apiToken>2146b70b-80f0-4784-b9f6-a59d1eff8fe0</apiToken>
+                <apiToken>xxxxxx-80f0-4784-b9f6-xxxxxx</apiToken>
                 <args>
                   <arg>--all-projects</arg>
                 </args>
