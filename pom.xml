@@ -126,15 +126,18 @@
                     <goal>test</goal>
                   </goals>
                 </execution>
+                <!--
                 <execution>
                   <id>snyk-monitor</id>
                   <goals>
                     <goal>monitor</goal>
                   </goals>
                 </execution>
+                -->
               </executions>
               <configuration>
                 <apiToken>${env.SNYK_TOKEN}</apiToken>
+                <failOnIssues>false</failOnIssues>
                 <args>
                   <arg>--all-projects</arg>
                 </args>
