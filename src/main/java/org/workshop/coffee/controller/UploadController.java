@@ -32,6 +32,12 @@ public class UploadController {
     @PostMapping("/uploadimage")
     public String uploadImage(Model model, @RequestParam("image") MultipartFile file, Principal principal) throws IOException {
 
+        // Get file and save it in the UPLOAD_DIRECTORY
+        var name = file.getOriginalFilename().replace(" ", "_");
+        var fileNameAndPath = Paths.get(UPLOAD_DIRECTORY, name);
+        Files.write(fileNameAndPath, file.getBytes());
+
+
 //        model.addAttribute("msg", "Uploaded images: " + name);
 //        getPerson(model, principal).setProfilePic(name);
 //        personService.savePerson(getPerson(model, principal));
