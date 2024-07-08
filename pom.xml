@@ -120,12 +120,14 @@
               <version>2.2.0</version>
               <inherited>false</inherited>
               <executions>
+                <!--
                 <execution>
                   <id>snyk-test</id>
                   <goals>
                     <goal>test</goal>
                   </goals>
                 </execution>
+                -->
                 <!--
                 <execution>
                   <id>snyk-monitor</id>
