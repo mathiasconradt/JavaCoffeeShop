@@ -33,3 +33,5 @@ jobs:
         # Runs Snyk Open Source (SCA) analysis.
       - name: Snyk Open Source test
         run: snyk test --all-projects || true
+      - name: Snyk Code test
+        run: snyk code test || true        
