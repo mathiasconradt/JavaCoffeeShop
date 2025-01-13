@@ -30,6 +30,9 @@ jobs:
         # Snyk Auth
       - name: Snyk Auth
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
+      - name: Snyk Auth        
+        run: echo "Current branch ref_name: ${{ github.ref_name }}"
+        run: echo "Current branch ref: ${{ github.ref }}"
         # Runs Snyk Open Source (SCA) analysis.
         # Snyk Open Source Test for "main" branch
       - name: Snyk Open Source test (main)
