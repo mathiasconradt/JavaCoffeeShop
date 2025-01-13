@@ -30,17 +30,16 @@ jobs:
         # Snyk Auth
       - name: Snyk Auth
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
-      - name: Snyk Auth        
-        run: echo "Current branch ref_name: ${{ github.ref_name }}"
-        run: echo "Current branch ref: ${{ github.ref }}"
+      - name: Snyk Branch Info
+        run: echo ${{ github.ref_name }}
         # Runs Snyk Open Source (SCA) analysis.
         # Snyk Open Source Test for "main" branch
       - name: Snyk Open Source test (main)
-        if: github.ref == 'refs/heads/main'
+        if: github.ref_name == 'main'
         run: snyk test --all-projects --severity-threshold=medium
         # Snyk Open Source Test for "product-search" branch
       - name: Snyk Open Source test (product-search)
-        if: github.ref == 'refs/heads/product-search'
+        if: github.ref_name == 'product-search'
         run: snyk test --all-projects --severity-threshold=critical
         # Snyk Code Test
       - name: Snyk Code test
