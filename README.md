@@ -8,6 +8,6 @@ However it is heavily edited, updated and includes security problems by design!
 
 Please do not use this application and workshop in any other way than intended or without consent of [Simon Maple](https://twitter.com/sjmaple)
 
----
+----
 
 Latest version of the [Workshop](/workshop/WORKSHOP.md)
