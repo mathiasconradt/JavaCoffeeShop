@@ -31,7 +31,14 @@ jobs:
       - name: Snyk Auth
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
         # Runs Snyk Open Source (SCA) analysis.
-      - name: Snyk Open Source test
-        run: snyk test --all-projects || true
+        # Snyk Open Source Test for "main" branch
+      - name: Snyk Open Source test (main)
+        if: github.ref == 'refs/heads/main'
+        run: snyk test --all-projects --severity-threshold=medium
+        # Snyk Open Source Test for "product-search" branch
+      - name: Snyk Open Source test (product-search)
+        if: github.ref == 'refs/heads/product-search'
+        run: snyk test --all-projects --severity-threshold=critical
+        # Snyk Code Test
       - name: Snyk Code test
         run: snyk code test || true        
