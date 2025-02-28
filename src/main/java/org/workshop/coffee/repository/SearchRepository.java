@@ -32,7 +32,5 @@ public class SearchRepository {
         return resultList;
 
     }
-
-
 }
 

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="">
   <head lang="en">
     <title>CoffeeShop</title>
+    <!-- add head fragment -->
     <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
     <!-- add header fragment -->
     <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
@@ -13,7 +14,10 @@
   </head>
   <body>
     <div class="container">
-
+      <!-- add header fragment -->
+      <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+      <!-- add products table fragment -->
+      <!--/*/ <th:block th:include="fragments/productsTable :: productsTable"></th:block> /*/-->
     </div>
   </body>
 </html>
