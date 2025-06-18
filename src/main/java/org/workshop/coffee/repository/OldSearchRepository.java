@@ -25,13 +25,9 @@ public class OldSearchRepository {
         return resultList;
     }
 
-    public List searchProduct2 (String input) {
-        var lowerInput = input.toLowerCase(Locale.ROOT);
-        var query = em.createNativeQuery(String.format("Select * from Product where lower(description) like '%%%s%%' OR lower(product_name) like '%%%s%%'", lowerInput, lowerInput), Product.class);
-        List resultList;
-        resultList = query.getResultList();
-        return resultList;
+    public boolean doSomething() {
+        var token = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzE4NzI0NDgzLCJjdXN0b21fZGF0YSI6IlRoaXMgaXMgc29tZSBjdXN0b20gZGF0YSJ9";
+        return token == null;
     }
-
 
 }
