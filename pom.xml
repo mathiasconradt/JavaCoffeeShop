@@ -16,8 +16,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>11</java.version>
-    </properties>
+        <java.version>11</java.version>    
+        <sonar.organization>mathiasconradt</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>         
 
     <dependencies>
         <dependency>
@@ -147,6 +149,5 @@
             </plugin>            
         </plugins>
     </build>
-
 
 </project>
