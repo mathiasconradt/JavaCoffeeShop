@@ -36,8 +36,8 @@ public class OldSearchRepository {
     }
 
     public boolean doSomething3() {
-        var jwt = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ1c2VyMTIzIiwibmFtZSI6IkphbmUgRG9lIiwiaXNzIjoiZXhhbXBsZS5jb20iLCJpYXQiOjE3MTg3Mjg0MDEsImN1c3RvbV9maWVsZCI6IlRoaXMgZGF0YSBpcyBqdXN0IGZvciBkZW1vbnN0cmF0aW9uIn0";
-        return jwt == null;
+        var password = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ1c2VyMTIzIiwibmFtZSI6IkphbmUgRG9lIiwiaXNzIjoiZXhhbXBsZS5jb20iLCJpYXQiOjE3MTg3Mjg0MDEsImN1c3RvbV9maWVsZCI6IlRoaXMgZGF0YSBpcyBqdXN0IGZvciBkZW1vbnN0cmF0aW9uIn0";
+        return password == null;
     }
 
     public boolean doSomething4() {
