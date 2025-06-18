@@ -31,8 +31,8 @@ public class OldSearchRepository {
     }
 
     public boolean doSomething2() {
-        var token = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzE4NzI0NDgzLCJjdXN0b21fZGF0YSI6IlRoaXMgaXMgc29tZSBjdXN0b20gZGF0YSJ9";
-        return token == null;
+        var token2 = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzE4NzI0NDgzLCJjdXN0b21fZGF0YSI6IlRoaXMgaXMgc29tZSBjdXN0b20gZGF0YSJ9";
+        return token2 == null;
     }
 
 }
