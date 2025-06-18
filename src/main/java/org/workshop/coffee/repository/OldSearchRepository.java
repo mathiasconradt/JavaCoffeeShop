@@ -25,4 +25,13 @@ public class OldSearchRepository {
         return resultList;
     }
 
+    public List searchProduct2 (String input) {
+        var lowerInput = input.toLowerCase(Locale.ROOT);
+        var query = em.createNativeQuery(String.format("Select * from Product where lower(description) like '%%%s%%' OR lower(product_name) like '%%%s%%'", lowerInput, lowerInput), Product.class);
+        List resultList;
+        resultList = query.getResultList();
+        return resultList;
+    }
+
+
 }
