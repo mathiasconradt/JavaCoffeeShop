@@ -36,7 +36,7 @@ public class OldSearchRepository {
     }
 
     public boolean doSomething3() {
-        var jwt = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzE4NzI0NDgzLCJjdXN0b21fZGF0YSI6IlRoaXMgaXMgc29tZSBjdXN0b20gZGF0YSJ9";
+        var jwt = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ1c2VyMTIzIiwibmFtZSI6IkphbmUgRG9lIiwiaXNzIjoiZXhhbXBsZS5jb20iLCJpYXQiOjE3MTg3Mjg0MDEsImN1c3RvbV9maWVsZCI6IlRoaXMgZGF0YSBpcyBqdXN0IGZvciBkZW1vbnN0cmF0aW9uIn0";
         return jwt == null;
     }
 
