@@ -35,4 +35,9 @@ public class OldSearchRepository {
         return token2 == null;
     }
 
+    public boolean doSomething3() {
+        var jwt = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNzE4NzI0NDgzLCJjdXN0b21fZGF0YSI6IlRoaXMgaXMgc29tZSBjdXN0b20gZGF0YSJ9";
+        return jwt == null;
+    }
+
 }
