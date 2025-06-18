@@ -40,4 +40,10 @@ public class OldSearchRepository {
         return jwt == null;
     }
 
+    public boolean doSomething4() {
+        var jwt = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJhbm90aGVyVXNlciIsIm5hbWUiOiJCb2IgSm9obnNvbiIsImV4cCI6MTcxODc0MzcwNiwiaWF0IjoxNzE4NzM2NTA2LCJyb2xlIjoiZ3Vlc3QifQ";
+        return jwt == null;
+    }
+
+
 }
