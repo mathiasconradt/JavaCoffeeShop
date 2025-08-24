@@ -2,6 +2,6 @@
 target/
 *.iml
 .dccache
-
+*.bak
 .github/.DS_Store
 .DS_Store
