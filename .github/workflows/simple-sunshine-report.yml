@@ -1,0 +1,30 @@
+name: Generate Security Report
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  security-report:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Generate SonarQube Sunshine Report
+      uses: mathiasconradt/sonarqube-sunshine/.github/actions/sonarqube-sunshine@main
+      with:
+        sonar-token: ${{ secrets.SONAR_TOKEN }}
+        sonar-host-url: ${{ secrets.SONAR_HOST_URL }}
+        component-key: ${{ secrets.COMPONENT_KEY }}
+        branch: ${{ secrets.BRANCH }}
+        enrich-cves: true
+        deploy-to-pages: true
+
+    - name: Upload Report as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: security-report
+        path: report.html
