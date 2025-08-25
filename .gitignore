@@ -2,3 +2,5 @@
 target/
 *.iml
 .dccache
+.DS_Store
+*.sarif
