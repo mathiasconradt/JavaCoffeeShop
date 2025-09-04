@@ -4,6 +4,3 @@
 
 This application is an intentional vulnerable Java Spring-Boot application with Thymeleaf.
 It is use for training purposes only!
-
-The code is and layout of the application is originally based on https://github.com/hieutdo/waa-coffee-shop, however it is heavily edited, updated and includes security problems by design!
-
