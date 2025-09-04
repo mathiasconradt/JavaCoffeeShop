@@ -20,7 +20,6 @@ public class SearchRepository {
 
     public List<Product> searchProduct (String input) {
 
-        /*
         // lowercase the input
         var lowerInput = input.toLowerCase(Locale.ROOT);
         // create a query matching the input to description and name
@@ -29,9 +28,9 @@ public class SearchRepository {
         var resultList = (List<Product>) query.getResultList();
         // return the result list
         return resultList;
-        */
 
-        return null;
+
+        // return null;
     }
 
 }
